@@ -14,4 +14,12 @@ def about():
 def contact():
     return '<h1>Contact Us</h1>'
 
+@app.route('/profile',defaults={'_route':"home",'nilai':0})
+@app.route('/profile/<int:nilai>',defaults={'_route':"profile"})
+def profile_name(nilai,route):
+    if _route=="home":
+        return '<h1>ProfileHome</h1>'
+    elif _route=="profile":
+        nilai = nilai+100
+        return '<h1>Hello %s !</h1>' % nilai
 app.run(debug=True)
