@@ -1,7 +1,8 @@
-#include <stdio.h>
+#include <iostream>
 
-int main(int argc, char **argv)
-{
-	printf("hello world\n");
-	return 0;
+using namespace std;
+
+int main() {
+    cout << "Hello world from Project2!" << endl;
+    return 0;
 }
